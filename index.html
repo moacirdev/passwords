@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    
+    <script src="libs/sha256.js"></script> <!-- Inclui a biblioteca local de hashing -->
+    <script src="./script.js"></script> <!-- Inclui o script principal -->
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Senha</h1>
+        
+        <label for="nome">Nome do Cliente:</label>
+        <input type="text" id="nome" placeholder="Digite o nome do cliente">
+        
+        <label for="caractere">Caractere Especial:</label>
+        <input type="text" id="caractere" placeholder="Digite um caractere especial" maxlength="1">
+        
+        <button id="gerarSenha">Gerar Senha</button>
+        
+        <p id="senhaGerada" class="senha"></p>
+        
+        <button id="copiarSenha" disabled>Copiar Senha</button>
+    </div>
+</body>
+</html>
